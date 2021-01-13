@@ -19,18 +19,36 @@ namespace JurassicPark
             //       -When the app runs it should let the user choose one of the following options.
 
             // Welcome User, please choose from the following
-            Greeting("Hello, please choose from the following:");
 
-            Console.WriteLine();
-            Console.WriteLine("View - See a list of all the dinosaurs");
-            Console.WriteLine("Add - Add a new dinosaur");
-            Console.WriteLine("Remove - Delete a dinosaur from the list");
-            Console.WriteLine("Transfer - Move a dino from one enclosure to another one");
-            Console.WriteLine("Summary - Display the number of Carnivores and the number of Herbivores");
-            Console.WriteLine("Quit - Stop the App");
-            Console.WriteLine();
-            Console.WriteLine("What is your choice?");
-            var choice = Console.ReadLine();
+            //while the user hasn't chosen to quit, keep a loop going until user quits
+            // Algorithm : Before the loop set our boolean to false : they havent quit
+            var userHasChosenToQuit = false;
+            // While our boolean is false: show the menu
+            while (userHasChosenToQuit == false)
+            {
+
+                Greeting("Hello, please choose from the following:");
+
+                Console.WriteLine();
+                Console.WriteLine("View - See a list of all the dinosaurs");
+                Console.WriteLine("Add - Add a new dinosaur");
+                Console.WriteLine("Remove - Delete a dinosaur from the list");
+                Console.WriteLine("Transfer - Move a dino from one enclosure to another one");
+                Console.WriteLine("Summary - Display the number of Carnivores and the number of Herbivores");
+                Console.WriteLine("Quit - Stop the App");
+                Console.WriteLine();
+                Console.WriteLine("What is your choice?");
+                var choice = Console.ReadLine();
+
+                if (choice == "Quit")
+                {
+                    userHasChosenToQuit = true;
+                }
+            }
+            //If the user's choice is "quit", set boolean to true
+            // (Back to loop) 
+
+
 
             // View
             // This command will show the all the dinosaurs in the list, ordered by WhenAcquired. If there aren't any dinosaurs in the park then print out a message that there aren't any.
