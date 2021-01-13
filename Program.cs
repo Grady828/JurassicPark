@@ -4,12 +4,33 @@ using System.Linq;
 
 namespace JurassicPark
 {
-  class Program
-  {
-    static void Main(string[] args)
+    class Program
     {
-      Console.WriteLine("Welcome to C#");
+        static void Main(string[] args)
+        {
+            //       -When the app runs it should let the user choose one of the following options.
 
+            // Welcome User, please choose from the following
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Hello, please choose from the following:");
+            Console.WriteLine();
+            Console.WriteLine();
+            // View
+            // This command will show the all the dinosaurs in the list, ordered by WhenAcquired. If there aren't any dinosaurs in the park then print out a message that there aren't any.
+            // Add
+            // This command will let the user type in the information for a dinosaur and add it to the list. Prompt for the Name, Diet Type, Weight and Enclosure Number, but the WhenAcquired must be supplied by the code.
+            // Remove
+            // This command will prompt the user for a dinosaur name then find and delete the dinosaur with that name.
+            // Transfer
+            // This command will prompt the user for a dinosaur name and a new EnclosureNumber and update that dino's information.
+            // Summary
+            // This command will display the number of carnivores and the number of herbivores.
+            // Quit
+            // This will stop the program
+
+
+        }
     }
-  }
 }
