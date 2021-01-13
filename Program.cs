@@ -28,6 +28,10 @@ namespace JurassicPark
             Console.WriteLine("Transfer - Move a dino from one enclosure to another one");
             Console.WriteLine("Summary - Display the number of Carnivores and the number of Herbivores");
             Console.WriteLine("Quit - Stop the App");
+            Console.WriteLine();
+            Console.WriteLine("What is your choice?");
+            var choice = Console.ReadLine();
+
             // View
             // This command will show the all the dinosaurs in the list, ordered by WhenAcquired. If there aren't any dinosaurs in the park then print out a message that there aren't any.
 
