@@ -30,17 +30,19 @@ namespace JurassicPark
                 Greeting("Hello, please choose from the following:");
 
                 Console.WriteLine();
-                Console.WriteLine("View - See a list of all the dinosaurs");
-                Console.WriteLine("Add - Add a new dinosaur");
-                Console.WriteLine("Remove - Delete a dinosaur from the list");
-                Console.WriteLine("Transfer - Move a dino from one enclosure to another one");
-                Console.WriteLine("Summary - Display the number of Carnivores and the number of Herbivores");
-                Console.WriteLine("Quit - Stop the App");
+                Console.WriteLine("VIEW - See a list of all the dinosaurs");
+                Console.WriteLine("ADD - Add a new dinosaur");
+                Console.WriteLine("REMOVE - Delete a dinosaur from the list");
+                Console.WriteLine("TRANSFERr - Move a dino from one enclosure to another one");
+                Console.WriteLine("SUMMARY - Display the number of Carnivores and the number of Herbivores");
+                Console.WriteLine("QUIT - Stop the App");
                 Console.WriteLine();
                 Console.WriteLine("What is your choice?");
                 var choice = Console.ReadLine();
+                string v = choice.ToUpper();
+                choice = v;
 
-                if (choice == "Quit")
+                if (choice == "QUIT")
                 {
                     userHasChosenToQuit = true;
                 }
