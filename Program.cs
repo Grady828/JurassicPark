@@ -103,6 +103,16 @@ namespace JurassicPark
                     //     enclosure number
                     Console.WriteLine("What is it's enclosure Number");
                     var newDinoEnclosureNumber = int.Parse(Console.ReadLine());
+                    var newDino = new Dino()
+                    {
+                        Name = newDinoName,
+                        DietType = newDinoDiet,
+                        WhenAcquired = DateTime.Now,
+                        Weight = newDinoWeight,
+                        EnclosureNumber = newDinoEnclosureNumber,
+                    };
+                    dinos.Add(newDino);
+
                 }
 
                 if (choice == "QUIT")
