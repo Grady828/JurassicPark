@@ -92,7 +92,7 @@ namespace JurassicPark
                 // For every dino do the following: Print name, dietType, whenAquired, weight, enclosureNumber
 
                 foreach (var dino in dinos)
-                    Console.WriteLine($"{dino.Name} {dino.DietType} {dino.Weight} {dino.WhenAcquired} {dino.EnclosureNumber}");
+                    Console.WriteLine($"{dino.Name} is a {dino.DietType} that weighs {dino.Weight}lbs, we got them {dino.WhenAcquired} and they live in display # {dino.EnclosureNumber}");
 
 
                 if (choice == "QUIT")
