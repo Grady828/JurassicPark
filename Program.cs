@@ -27,39 +27,40 @@ namespace JurassicPark
         }
         static void Main(string[] args)
         {
-            var Jim = new Dino()
+
+
+            var dinos = new List<Dino>() {
+                new Dino()
             {
                 Name = "Jim",
                 DietType = "Carnivore",
                 WhenAcquired = DateTime.Now,
                 Weight = 8900,
                 EnclosureNumber = 11,
-            };
-            var Jam = new Dino()
-            {
-                Name = "Jam",
-                DietType = "Herbivore",
-                WhenAcquired = DateTime.Now,
-                Weight = 234,
-                EnclosureNumber = 13,
-            };
-            var Pim = new Dino()
-            {
-                Name = "Pim",
-                DietType = "Herbivore",
-                WhenAcquired = DateTime.Now,
-                Weight = 1700,
-                EnclosureNumber = 10,
-            };
-            var Pam = new Dino()
+            },
+                new Dino()
             {
                 Name = "Pam",
                 DietType = "Carnivore",
                 WhenAcquired = DateTime.Now,
                 Weight = 9900,
                 EnclosureNumber = 04,
+            }, new Dino()
+            {
+                Name = "Pim",
+                DietType = "Herbivore",
+                WhenAcquired = DateTime.Now,
+                Weight = 1700,
+                EnclosureNumber = 10,
+            }, new Dino()
+            {
+                Name = "Jam",
+                DietType = "Herbivore",
+                WhenAcquired = DateTime.Now,
+                Weight = 234,
+                EnclosureNumber = 13,
+            }
             };
-            var dinos = new List<Dino>() { Jim, Jam, Pim };
 
             //       -When the app runs it should let the user choose one of the following options.
 
@@ -87,6 +88,7 @@ namespace JurassicPark
                 string v = choice.ToUpper().Trim();
                 choice = v;
 
+
                 // This command will show the all the dinosaurs in the list, ordered by WhenAcquired. 
                 // If there aren't any dinosaurs in the park then print out a message that there aren't any.
                 // For every dino do the following: Print name, dietType, whenAquired, weight, enclosureNumber
@@ -94,11 +96,16 @@ namespace JurassicPark
                 foreach (var dino in dinos)
                     Console.WriteLine($"{dino.Name} is a {dino.DietType} that weighs {dino.Weight}lbs, we got them {dino.WhenAcquired} and they live in display # {dino.EnclosureNumber}");
 
+                if (choice == ADD)
+                    //ask name,     
+                    // Diet
+                    //     weight
+                    //     enclosure number
 
-                if (choice == "QUIT")
-                {
-                    userHasChosenToQuit = true;
-                }
+                    if (choice == "QUIT")
+                    {
+                        userHasChosenToQuit = true;
+                    }
                 // This command will show the all the dinosaurs in the list, ordered by WhenAcquired. 
                 // If there aren't any dinosaurs in the park then print out a message that there aren't any.
             }
