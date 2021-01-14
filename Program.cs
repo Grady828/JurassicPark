@@ -92,15 +92,11 @@ namespace JurassicPark
                     //ask name,   
                     Console.WriteLine("What is the name? ");
                     var newDinoName = Console.ReadLine();
-
-                    // Diet
                     Console.WriteLine("What is it's diet? ");
                     var newDinoDiet = Console.ReadLine();
-                    //     weight
                     Console.WriteLine("What is its weight?");
                     var newDinoWeight = int.Parse(Console.ReadLine());
 
-                    //     enclosure number
                     Console.WriteLine("What is it's enclosure Number");
                     var newDinoEnclosureNumber = int.Parse(Console.ReadLine());
                     var newDino = new Dino()
@@ -111,37 +107,32 @@ namespace JurassicPark
                         Weight = newDinoWeight,
                         EnclosureNumber = newDinoEnclosureNumber,
                     };
+
                     dinos.Add(newDino);
 
-                }
+                    if (choice == "REMOVE")
+                    {
+                        Console.WriteLine("What is the Dinos name");
+                        var nameofDino = Console.ReadLine();
+                        var foundDino = dinos.Find(dino => dino.Name == nameofDino);
+                        dinos.Remove(foundDino);
+                    }
+                    if (choice == "SUMMARY")
+                    {
+                        var totalCarnivores = dinos.Where(dino => dino.DietType == "Carnivores").Count();
+                        var totalHerbivores = dinos.Where(dino => dino.DietType == "Herbivores").Count();
 
-                if (choice == "QUIT")
-                {
-                    userHasChosenToQuit = true;
+                        Console.WriteLine($"There are {totalHerbivores} Herbivores and {totalCarnivores} Carnivores");
+                    }
+                    if (choice == "QUIT")
+                    {
+                        userHasChosenToQuit = true;
+                    }
                 }
-                // This command will show the all the dinosaurs in the list, ordered by WhenAcquired. 
-                // If there aren't any dinosaurs in the park then print out a message that there aren't any.
             }
-            //If the user's choice is "quit", set boolean to true
-            // (Back to loop) 
-
-
-
-            // View
-
-
-            // Add
-            // This command will let the user type in the information for a dinosaur and add it to the list. Prompt for the Name, Diet Type, Weight and Enclosure Number, but the WhenAcquired must be supplied by the code.
-            // Remove
-            // This command will prompt the user for a dinosaur name then find and delete the dinosaur with that name.
-            // Transfer
-            // This command will prompt the user for a dinosaur name and a new EnclosureNumber and update that dino's information.
-            // Summary
-            // This command will display the number of carnivores and the number of herbivores.
-
-
-
 
         }
-    }
-}
+
+
+
+
