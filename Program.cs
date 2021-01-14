@@ -97,15 +97,26 @@ namespace JurassicPark
                     Console.WriteLine($"{dino.Name} is a {dino.DietType} that weighs {dino.Weight}lbs, we got them {dino.WhenAcquired} and they live in display # {dino.EnclosureNumber}");
 
                 if (choice == ADD)
-                    //ask name,     
-                    // Diet
-                    //     weight
-                    //     enclosure number
+                    //ask name,   
+                    Console.WriteLine("What is the name? ");
+                var newDinoName = Console.ReadLine();
 
-                    if (choice == "QUIT")
-                    {
-                        userHasChosenToQuit = true;
-                    }
+                // Diet
+                Console.WriteLine("What is it's diet? ");
+                var newDinoDiet = Console.ReadLine();
+                //     weight
+                Console.WriteLine("What is its weight?");
+                var newDinoWeight = int.Parse(Console.ReadLine());
+
+                //     enclosure number
+                Console.WriteLine("What is it's enclosure Number");
+                var newDinoEnclosureNumber = int.Parse(Console.ReadLine());
+
+
+                if (choice == "QUIT")
+                {
+                    userHasChosenToQuit = true;
+                }
                 // This command will show the all the dinosaurs in the list, ordered by WhenAcquired. 
                 // If there aren't any dinosaurs in the park then print out a message that there aren't any.
             }
